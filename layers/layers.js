@@ -257,9 +257,30 @@ var lyr_PortafoliodeproyectoGCVP_14 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/PortafoliodeproyectoGCVP_14.png" /> Portafolio de proyecto GCVP'
             });
+var format_PROERI_15 = new ol.format.GeoJSON();
+var features_PROERI_15 = format_PROERI_15.readFeatures(json_PROERI_15, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_PROERI_15 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_PROERI_15.addFeatures(features_PROERI_15);
+var lyr_PROERI_15 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_PROERI_15, 
+                style: style_PROERI_15,
+                popuplayertitle: "PROERI",
+                interactive: true,
+    title: 'PROERI<br />\
+    <img src="styles/legend/PROERI_15_0.png" /> Alarmante<br />\
+    <img src="styles/legend/PROERI_15_1.png" /> Deficiente<br />\
+    <img src="styles/legend/PROERI_15_2.png" /> Falla inminente<br />\
+    <img src="styles/legend/PROERI_15_3.png" /> Regular<br />\
+    <img src="styles/legend/PROERI_15_4.png" /> Riesgo inaceptable<br />\
+    <img src="styles/legend/PROERI_15_5.png" /> Seria<br />'
+        });
 
-lyr_GoogleHybrid_0.setVisible(true);lyr_OpenStreetMap_1.setVisible(true);lyr_ZonasdeConservacin_2.setVisible(false);lyr_Lmitecantonal_3.setVisible(false);lyr_Lmiteprovincial_4.setVisible(false);lyr_Redvialnacionalestratgica_5.setVisible(false);lyr_Redvialnacional_6.setVisible(true);lyr_Proyectosencierrecontractual_7.setVisible(true);lyr_Proyectosencontratacin_8.setVisible(true);lyr_Proyectosendiseo_9.setVisible(true);lyr_Proyectosenejecucin_10.setVisible(true);lyr_Proyectosenplanificacin_11.setVisible(true);lyr_Proyectossininiciar_12.setVisible(true);lyr_Proyectossuspendidos_13.setVisible(true);lyr_PortafoliodeproyectoGCVP_14.setVisible(true);
-var layersList = [lyr_GoogleHybrid_0,lyr_OpenStreetMap_1,lyr_ZonasdeConservacin_2,lyr_Lmitecantonal_3,lyr_Lmiteprovincial_4,lyr_Redvialnacionalestratgica_5,lyr_Redvialnacional_6,lyr_Proyectosencierrecontractual_7,lyr_Proyectosencontratacin_8,lyr_Proyectosendiseo_9,lyr_Proyectosenejecucin_10,lyr_Proyectosenplanificacin_11,lyr_Proyectossininiciar_12,lyr_Proyectossuspendidos_13,lyr_PortafoliodeproyectoGCVP_14];
+lyr_GoogleHybrid_0.setVisible(true);lyr_OpenStreetMap_1.setVisible(true);lyr_ZonasdeConservacin_2.setVisible(false);lyr_Lmitecantonal_3.setVisible(false);lyr_Lmiteprovincial_4.setVisible(false);lyr_Redvialnacionalestratgica_5.setVisible(false);lyr_Redvialnacional_6.setVisible(true);lyr_Proyectosencierrecontractual_7.setVisible(true);lyr_Proyectosencontratacin_8.setVisible(true);lyr_Proyectosendiseo_9.setVisible(true);lyr_Proyectosenejecucin_10.setVisible(true);lyr_Proyectosenplanificacin_11.setVisible(true);lyr_Proyectossininiciar_12.setVisible(true);lyr_Proyectossuspendidos_13.setVisible(true);lyr_PortafoliodeproyectoGCVP_14.setVisible(true);lyr_PROERI_15.setVisible(true);
+var layersList = [lyr_GoogleHybrid_0,lyr_OpenStreetMap_1,lyr_ZonasdeConservacin_2,lyr_Lmitecantonal_3,lyr_Lmiteprovincial_4,lyr_Redvialnacionalestratgica_5,lyr_Redvialnacional_6,lyr_Proyectosencierrecontractual_7,lyr_Proyectosencontratacin_8,lyr_Proyectosendiseo_9,lyr_Proyectosenejecucin_10,lyr_Proyectosenplanificacin_11,lyr_Proyectossininiciar_12,lyr_Proyectossuspendidos_13,lyr_PortafoliodeproyectoGCVP_14,lyr_PROERI_15];
 lyr_ZonasdeConservacin_2.set('fieldAliases', {'Zona': 'Zona', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'Zona2': 'Zona2', 'Nombre': 'Nombre', 'REgiones': 'REgiones', });
 lyr_Lmitecantonal_3.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'CÓDIGO_CA': 'CÓDIGO_CA', 'CANTÓN': 'CANTÓN', });
 lyr_Lmiteprovincial_4.set('fieldAliases', {'gml_id': 'gml_id', 'OBJECTID': 'OBJECTID', 'CÓDIGO': 'CÓDIGO', 'CÓDIGO_PR': 'CÓDIGO_PR', 'PROVINCIA': 'PROVINCIA', 'ORIGEN_DEL': 'ORIGEN_DEL', 'ÁREA': 'ÁREA', 'VERSIÓN': 'VERSIÓN', 'GLOBALID': 'GLOBALID', });
@@ -273,6 +294,7 @@ lyr_Proyectosenplanificacin_11.set('fieldAliases', {'ID': 'ID', 'X': 'X', 'Y': '
 lyr_Proyectossininiciar_12.set('fieldAliases', {'ID': 'ID', 'X': 'X', 'Y': 'Y', 'Proyecto': 'Proyecto', 'Alcance': 'Alcance', 'Estado': 'Estado', 'Ruta': 'Ruta', 'Inicio': 'Inicio', 'Finalizaci': 'Finalizaci', 'Avance': 'Avance', 'Costo': 'Costo', });
 lyr_Proyectossuspendidos_13.set('fieldAliases', {'ID': 'ID', 'X': 'X', 'Y': 'Y', 'Proyecto': 'Proyecto', 'Alcance': 'Alcance', 'Estado': 'Estado', 'Ruta': 'Ruta', 'Inicio': 'Inicio', 'Finalizaci': 'Finalizaci', 'Avance': 'Avance', 'Costo': 'Costo', });
 lyr_PortafoliodeproyectoGCVP_14.set('fieldAliases', {'ID': 'ID', 'X': 'X', 'Y': 'Y', 'Proyecto': 'Proyecto', 'Alcance': 'Alcance', 'Estado': 'Estado', 'Ruta': 'Ruta', 'Inicio': 'Inicio', 'Finalizaci': 'Finalizaci', 'Avance': 'Avance', 'Costo': 'Costo', 'field_12': 'field_12', 'field_13': 'field_13', 'field_14': 'field_14', 'field_15': 'field_15', 'field_16': 'field_16', 'field_17': 'field_17', 'field_18': 'field_18', 'field_19': 'field_19', 'field_20': 'field_20', 'field_21': 'field_21', 'field_22': 'field_22', 'field_23': 'field_23', 'field_24': 'field_24', 'field_25': 'field_25', 'field_26': 'field_26', });
+lyr_PROERI_15.set('fieldAliases', {'ID': 'ID', 'Nombre del': 'Nombre', 'Descripci�': 'Descripción', 'Tipo de in': 'Intervención', 'Condición': 'Condición', 'Estado': 'Estado', 'Equipo de': 'Equipo', 'Provincia': 'Provincia', 'Cantón': 'Cantón', 'Latitud': 'Latitud', 'Longitud': 'Longitud', 'Ruta Nacio': 'Ruta', 'Fuente de': 'Financiamiento', 'Monto del': 'Monto', });
 lyr_ZonasdeConservacin_2.set('fieldImages', {'Zona': 'Hidden', 'Shape_Leng': 'Hidden', 'Shape_Area': 'Hidden', 'Zona2': 'TextEdit', 'Nombre': 'TextEdit', 'REgiones': 'Hidden', });
 lyr_Lmitecantonal_3.set('fieldImages', {'OBJECTID': 'Hidden', 'CÓDIGO_CA': 'Hidden', 'CANTÓN': 'TextEdit', });
 lyr_Lmiteprovincial_4.set('fieldImages', {'gml_id': 'Hidden', 'OBJECTID': 'Hidden', 'CÓDIGO': 'Hidden', 'CÓDIGO_PR': 'Hidden', 'PROVINCIA': 'TextEdit', 'ORIGEN_DEL': 'Hidden', 'ÁREA': 'Hidden', 'VERSIÓN': 'Hidden', 'GLOBALID': 'Hidden', });
@@ -286,6 +308,7 @@ lyr_Proyectosenplanificacin_11.set('fieldImages', {'ID': 'Hidden', 'X': 'Hidden'
 lyr_Proyectossininiciar_12.set('fieldImages', {'ID': 'Hidden', 'X': 'Hidden', 'Y': 'Hidden', 'Proyecto': 'Hidden', 'Alcance': 'TextEdit', 'Estado': 'TextEdit', 'Ruta': 'TextEdit', 'Inicio': 'TextEdit', 'Finalizaci': 'TextEdit', 'Avance': 'TextEdit', 'Costo': 'TextEdit', });
 lyr_Proyectossuspendidos_13.set('fieldImages', {'ID': 'Hidden', 'X': 'Hidden', 'Y': 'Hidden', 'Proyecto': 'Hidden', 'Alcance': 'TextEdit', 'Estado': 'TextEdit', 'Ruta': 'TextEdit', 'Inicio': 'TextEdit', 'Finalizaci': 'TextEdit', 'Avance': 'TextEdit', 'Costo': 'TextEdit', });
 lyr_PortafoliodeproyectoGCVP_14.set('fieldImages', {'ID': 'Hidden', 'X': 'Hidden', 'Y': 'Hidden', 'Proyecto': 'TextEdit', 'Alcance': 'Hidden', 'Estado': 'Hidden', 'Ruta': 'Hidden', 'Inicio': 'Hidden', 'Finalizaci': 'Hidden', 'Avance': 'Hidden', 'Costo': 'Hidden', 'field_12': 'Hidden', 'field_13': 'Hidden', 'field_14': 'Hidden', 'field_15': 'Hidden', 'field_16': 'Hidden', 'field_17': 'Hidden', 'field_18': 'Hidden', 'field_19': 'Hidden', 'field_20': 'Hidden', 'field_21': 'Hidden', 'field_22': 'Hidden', 'field_23': 'Hidden', 'field_24': 'Hidden', 'field_25': 'Hidden', 'field_26': 'Hidden', });
+lyr_PROERI_15.set('fieldImages', {'ID': 'Hidden', 'Nombre del': 'TextEdit', 'Descripci�': 'TextEdit', 'Tipo de in': 'TextEdit', 'Condición': 'TextEdit', 'Estado': 'TextEdit', 'Equipo de': 'Hidden', 'Provincia': 'Hidden', 'Cantón': 'Hidden', 'Latitud': 'Hidden', 'Longitud': 'Hidden', 'Ruta Nacio': 'TextEdit', 'Fuente de': 'TextEdit', 'Monto del': 'TextEdit', });
 lyr_ZonasdeConservacin_2.set('fieldLabels', {'Zona2': 'inline label - visible with data', 'Nombre': 'inline label - visible with data', });
 lyr_Lmitecantonal_3.set('fieldLabels', {'CANTÓN': 'inline label - visible with data', });
 lyr_Lmiteprovincial_4.set('fieldLabels', {'PROVINCIA': 'inline label - visible with data', });
@@ -299,6 +322,7 @@ lyr_Proyectosenplanificacin_11.set('fieldLabels', {'Alcance': 'inline label - vi
 lyr_Proyectossininiciar_12.set('fieldLabels', {'Alcance': 'inline label - visible with data', 'Estado': 'inline label - visible with data', 'Ruta': 'inline label - visible with data', 'Inicio': 'inline label - visible with data', 'Finalizaci': 'inline label - visible with data', 'Avance': 'inline label - visible with data', 'Costo': 'inline label - visible with data', });
 lyr_Proyectossuspendidos_13.set('fieldLabels', {'Alcance': 'inline label - visible with data', 'Estado': 'inline label - visible with data', 'Ruta': 'inline label - visible with data', 'Inicio': 'inline label - visible with data', 'Finalizaci': 'inline label - visible with data', 'Avance': 'inline label - visible with data', 'Costo': 'inline label - visible with data', });
 lyr_PortafoliodeproyectoGCVP_14.set('fieldLabels', {'Proyecto': 'no label', });
-lyr_PortafoliodeproyectoGCVP_14.on('precompose', function(evt) {
+lyr_PROERI_15.set('fieldLabels', {'Nombre del': 'inline label - always visible', 'Descripci�': 'inline label - always visible', 'Tipo de in': 'inline label - always visible', 'Condición': 'inline label - always visible', 'Estado': 'inline label - always visible', 'Ruta Nacio': 'inline label - always visible', 'Fuente de': 'inline label - always visible', 'Monto del': 'inline label - always visible', });
+lyr_PROERI_15.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
